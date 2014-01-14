@@ -407,6 +407,10 @@ LatexCmds.lbrack =
 LatexCmds.lbracket =
 CharCmds['['] = bind(Paren, '[', ']');
 
+LatexCmds.lorcbrack = LatexCmds.lorcbracket = bind(Paren, ']', ']');
+LatexCmds.lorobrack = LatexCmds.lorobracket = bind(Paren, ']', '[');
+LatexCmds.lcrobrack = LatexCmds.lcrobracket = bind(Paren, '[', '[');
+
 var CloseParen = P(CloseBracket, parenMixin);
 
 LatexCmds.rparen =
