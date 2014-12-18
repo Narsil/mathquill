@@ -95,6 +95,7 @@ var manageTextarea = (function() {
     if (!opts) opts = {};
     var textCallback = opts.text || noop;
     var keyCallback = opts.key || noop;
+    var blurCallback = opts.blur || noop;
     var pasteCallback = opts.paste || noop;
     var onCut = opts.cut || noop;
 
@@ -195,7 +196,7 @@ var manageTextarea = (function() {
       popText(textCallback);
     }
 
-    function onBlur() { keydown = keypress = null; }
+    function onBlur(e) { keydown = keypress = null; blurCallback(e);}
 
     function onPaste(e) {
       // browsers are dumb.

@@ -129,6 +129,9 @@ function createRoot(jQ, root, textbox, editable) {
     key: function(key, evt) {
       cursor.parent.bubble('onKey', key, evt);
     },
+    blur: function(evt) {
+      cursor.parent.bubble('blur', evt);
+    },
     text: function(text) {
       cursor.parent.bubble('onText', text);
     },

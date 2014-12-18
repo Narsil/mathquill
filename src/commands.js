@@ -683,6 +683,12 @@ CharCmds['\\'] = P(MathCommand, function(_, _super) {
       return false;
     }
   };
+  _.blur = function(e){
+      // if e is undefined it is not a real blur
+      if (e !== undefined){
+          this.renderCommand();
+      }
+  };
   _.renderCommand = function() {
     this.jQ = this.jQ.last();
     this.remove();
